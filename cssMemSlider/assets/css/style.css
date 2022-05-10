@@ -1,0 +1,63 @@
+@import 'normalize';
+
+:root {
+    --color-bg: #222222;
+    --color-text: #ffffff;
+    --color-primary: #1b762a;
+    --color-secondary: #111111;
+    --font-main: 'Roboto', Arial, Verdana, Helvetica, sans-serif;
+}
+
+html {
+  height: 100%;
+  min-height: 100%;
+  font-size: 1em;
+  line-height: 1.4;
+  scroll-behavior: smooth;
+}
+
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.5);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100%;
+    color: var(--color-text);
+    min-width: 320px;
+    font-family: var(--font-main);
+    background-color: var(--color-bg);
+    box-sizing: border-box;
+}
+
+.page__slider {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 1200px;
+    box-sizing: border-box;
+}
+
+/* ==========================================================================
+   Slider style
+   ========================================================================== */
+
+.slider {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-left: 10em;
+  padding-right: 10em;
+}
