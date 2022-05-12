@@ -108,6 +108,36 @@ img {
 .slider__radio:nth-child(6):checked ~ .slider__info .slider__title:nth-child(6),
 .slider__radio:nth-child(7):checked ~ .slider__info .slider__title:nth-child(7) {
   opacity: 1;
+  transition: opacity 0.4s, transform 0.2s 0.1s;
+}
+
+.slider__radio:nth-child(1):checked ~ .slider__info .slider__title:nth-child(1) {
+  opacity: 1;
+  transform: none;
+}
+
+.slider__radio:nth-child(2):checked ~ .slider__info .slider__title:nth-child(2) {
+  transform: translate(calc(-100%));
+}
+
+.slider__radio:nth-child(3):checked ~ .slider__info .slider__title:nth-child(3) {
+  transform: translate(calc(-200%));
+}
+
+.slider__radio:nth-child(4):checked ~ .slider__info .slider__title:nth-child(4) {
+  transform: translate(calc(-300%));
+}
+
+.slider__radio:nth-child(5):checked ~ .slider__info .slider__title:nth-child(5) {
+  transform: translate(calc(-400%));
+}
+
+.slider__radio:nth-child(6):checked ~ .slider__info .slider__title:nth-child(6) {
+  transform: translate(calc(-500%));
+}
+
+.slider__radio:nth-child(7):checked ~ .slider__info .slider__title:nth-child(7) {
+  transform: translate(calc(-600%));
 }
 
 .slider__body {
@@ -136,7 +166,6 @@ img {
 .slider__dots {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   margin-bottom: 1em;
 }
 
@@ -177,30 +206,46 @@ img {
 .slider__title {
   flex: 1 1 100%;
   opacity: 0;
-  transition: opacity 0.2s;
+  transition: opacity 0.2s, transform 0.2s 0.2s;
   margin: 0;
+  transform: translate(1em);
+}
+
+.slider__title:nth-child(1) {
+  transform: translate(1em);
 }
 
 .slider__title:nth-child(2) {
-  transform: translate(calc(-100%));
+  transform: translate(calc(-100% + 1em));
 }
 
 .slider__title:nth-child(3) {
-  transform: translate(calc(-200%));
+  transform: translate(calc(-200% + 1em));
 }
 
 .slider__title:nth-child(4) {
-  transform: translate(calc(-300%));
+  transform: translate(calc(-300% + 1em));
 }
 
 .slider__title:nth-child(5) {
-  transform: translate(calc(-400%));
+  transform: translate(calc(-400% + 1em));
 }
 
 .slider__title:nth-child(6) {
-  transform: translate(calc(-500%));
+  transform: translate(calc(-500% + 1em));
 }
 
 .slider__title:nth-child(7) {
-  transform: translate(calc(-600%));
+  transform: translate(calc(-600% + 1em));
+}
+
+/* ==========================================================================
+   Adaptation style
+   ========================================================================== */
+
+@media (min-width: 48em)  {
+  .slider__info {
+    display: flex;
+    flex-direction: row-reverse;
+  }
 }
